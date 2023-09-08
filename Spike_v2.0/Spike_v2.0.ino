@@ -30,10 +30,6 @@ boolean defuse = false;
 char auth[] = "kLJQCdpyFcGEL5L0qumnPcxaswMMXaIa";
 
 
-
-
-
-
 void setup()
 {
   // Debug console
@@ -59,21 +55,17 @@ void setup()
 
 BLYNK_WRITE(V1) {   //Boton azul plantar bomba
 
-
   if (param.asInt() == 1) {
     plant = true;
     for (int i = 0; i < 24; i++) {
-
 
       digitalWrite(32, HIGH);
       delay(500);
       digitalWrite(32, LOW);
       delay(500);
-
     }
 
     for (int i = 0; i < 19; i++) {
-
 
       digitalWrite(32, HIGH);
       delay(250);
@@ -83,7 +75,6 @@ BLYNK_WRITE(V1) {   //Boton azul plantar bomba
 
     for (int i = 0; i < 29; i++) {
 
-
       digitalWrite(32, HIGH);
       delay(125);
       digitalWrite(32, LOW);
@@ -91,7 +82,6 @@ BLYNK_WRITE(V1) {   //Boton azul plantar bomba
     }
 
     for (int i = 0; i < 19; i++) {
-
 
       digitalWrite(32, HIGH);
       delay(50);
@@ -112,11 +102,9 @@ BLYNK_WRITE(V1) {   //Boton azul plantar bomba
 
 BLYNK_WRITE(V2) {   //Boton rojo desactivar bomba
 
-
   if (param.asInt() == 1) {
     defuse = true;
     for (int j = 0; j < 14; j++) {
-
 
       digitalWrite(33, HIGH);
       delay(500);
@@ -136,10 +124,7 @@ BLYNK_WRITE(V3) {   //Boton blanco encender luz blanca fija
 }
 
 
-
-
 void loop()
 {
   Blynk.run();
-
 }
